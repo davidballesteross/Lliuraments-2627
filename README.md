@@ -3,7 +3,7 @@
 
 ## 📋 Tasques
 
-- [Projecte 1](https://github.com/davidballesteross/Lliuraments-2627/LMSGI/github-markdown.md)
+- [Projecte 1](https://github.com/davidballesteross/Lliuraments-2627/LMSGI/Github-markdown.md)
 
 ---
 
