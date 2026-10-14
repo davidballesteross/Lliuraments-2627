@@ -3,14 +3,13 @@
 
 ## 📋 Tasques
 
-| 02 | [📁 Tasca 02](tasca02/README.md) | ✅ |
-| 03 | [📁 Tasca 03](tasca03/README.md) | ✅ |
-| 08 | [📁 Tasca 08](tasca08/readme.md) | 🔄 |
+- [Projecte 1](https://github.com/davidballesteross/Lliuraments-2627/LMSGI/github-markdown.md)
 
 ---
 
 ## 🗂️ Projectes
 
-| 🏢 **Projecte 2 · EverPia** | Consultora IT fictícia: resolució de reptes tecnològics per a clients | 🔄 |
+- [Projecte 1](https://github.com/davidballesteross/Lliuraments-2627/LMSGI/github-markdown.md)
+
 
 ---
