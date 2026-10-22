@@ -371,3 +371,36 @@ Aquesta va ser la més curiosa. Algunes habilitats es poden combinar amb altres 
 erDiagram
     HABILITAT }o--o{ HABILITAT : "combina amb"
 ```
+
+### Personatge i mascota: "acompanya"
+
+Aquesta és l'única relació d'**un a un** del joc. Cada personatge té una mascota que l'acompanya, i cada mascota va amb un sol personatge. Per això he fet servir `||` als dos costats.
+
+```mermaid
+erDiagram
+    PERSONATGE ||--|| MASCOTA : acompanya
+```
+
+### Mascota i ítem: "carrega"
+
+La mascota porta objectes a la motxilla. Una mascota pot carregar molts ítems (o cap), però un mateix ítem només pot anar a la motxilla d'una mascota, o de cap si ningú el porta. Per això a la banda de la mascota hi ha `|o` (zero o un) i a la de l'ítem hi ha `o{` (zero o molts).
+
+```mermaid
+erDiagram
+    MASCOTA |o--o{ ITEM : carrega
+```
+
+### Totes les relacions juntes
+
+Quan ja tenia les set relacions, les vaig ajuntar en un sol codi per veure-les totes alhora:
+
+```mermaid
+erDiagram
+    PERSONATGE }o--o{ HABILITAT : posseeix
+    PERSONATGE }o--o{ ITEM : equipa
+    PERSONATGE }o--o{ ENEMIC : enfronta
+    ENEMIC }o--o{ HABILITAT : enfronta
+    HABILITAT }o--o{ HABILITAT : "combina amb"
+    PERSONATGE ||--|| MASCOTA : acompanya
+    MASCOTA |o--o{ ITEM : carrega
+```
