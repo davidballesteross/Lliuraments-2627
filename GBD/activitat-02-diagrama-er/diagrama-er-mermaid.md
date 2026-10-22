@@ -28,27 +28,22 @@ erDiagram
 
 ---
 
-## Pas 2. Els atributs del personatge.
+## Pas 2. Els atributs del personatge
 
 Ara que ja tenia les caixes principals, tocava dir com és cadascuna: quines dades en volem guardar. Això són els atributs, i es posen dins de les claus `{}`, indicant primer el tipus de dada (text, número, etc.) i després el nom.
 
-Ho he fet entitat per entitat. Vaig començar pel personatge i ho vaig anar construint amb aquest codig:
+Ho he fet entitat per entitat. Vaig començar pel personatge i ho vaig anar construint amb aquest codi:
 
-```mermaidDesprés hi vaig afegir la resta de dades. El nom, el tipus i la qualitat són text (`string`). `Equipable` i `Comerciable` només poden ser sí o no, així que són de tipus `boolean`. I el pes és un número amb decimals, per això és de tipus `float`.
-
-Les **mesures** em van fer pensar una mica més. Al PDF apareixen com una sola cosa, però en realitat són tres valors: X, Y i Z. Mermaid no té una manera de fer un atribut que es divideixi en parts, i la guia del professor diu que en aquests casos s'han de posar les parts com a atributs separats. Per això vaig crear `Mesura_X`, `Mesura_Y` i `Mesura_Z`, que també són números amb decimals (`float`).
-
-I l'estructura quedaria així:
-
+```mermaid
 erDiagram
     PERSONATGE {
         string DNI PK
     }
 ```
 
-Després hi vaig afegir la resta de dades. El nom i el cognom són text (`string`) i la vida, la força, l'agilitat i el carisma són números (`int`). 
+Després hi vaig afegir la resta de dades. El nom i el cognom són text (`string`) i la vida, la força, l'agilitat i el carisma són números (`int`).
 
-I la estructura quedaria aixi:
+I l'estructura quedaria així:
 
 ```mermaid
 erDiagram
@@ -57,7 +52,7 @@ erDiagram
         string Nom
         string Cognom
         int Vida
-        int Força
+        int Forca
         int Agilitat
         int Carisma
     }
@@ -72,13 +67,8 @@ erDiagram
         string Nom "NOT NULL"
         string Cognom
         int Vida
-        int Força
-        int Agilita## Pas 6. Els atributs de l'ítem
-
-Per acabar amb els atributs, tocava l'ítem, que és el que en té més. Al PDF té aquestes dades: nom, codi, equipable, comerciable, tipus, pes, qualitat i mesures (X, Y i Z).
-
-Com sempre, vaig començar per la clau primària. L'ítem tampoc no té res tan únic com un DNI, així que vaig triar el **codi**, que és un número diferent per a cada ítem. És de tipus `int` i el marco amb `PK`:
-t
+        int Forca
+        int Agilitat
         int Carisma
     }
 ```
