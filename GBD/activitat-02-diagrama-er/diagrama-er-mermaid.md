@@ -263,3 +263,22 @@ erDiagram
     }
 ```
 
+Per últim, vaig marcar què no pot quedar buit. Un ítem ha de tenir sempre nom, tipus, qualitat, pes i les tres mesures, perquè sense aquestes dades no el podríem descriure bé. També vaig marcar `Comerciable`, perquè el joc sempre ha de saber si un objecte es pot comprar i vendre o no. Per això a tots aquests els vaig posar `"NOT NULL"`. `Equipable` el vaig deixar sense marcar:
+
+```mermaid
+erDiagram
+    ITEM {
+        int Codi PK
+        string Nom "NOT NULL"
+        boolean Equipable
+        boolean Comerciable "NOT NULL"
+        string Tipus "NOT NULL"
+        float Pes "NOT NULL"
+        string Qualitat "NOT NULL"
+        float Mesura_X "NOT NULL"
+        float Mesura_Y "NOT NULL"
+        float Mesura_Z "NOT NULL"
+    }
+```
+
+---
