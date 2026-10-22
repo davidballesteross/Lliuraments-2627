@@ -404,3 +404,9 @@ erDiagram
     PERSONATGE ||--|| MASCOTA : acompanya
     MASCOTA |o--o{ ITEM : carrega
 ```
+
+Una cosa que vaig tenir en compte és que moltes d'aquestes relacions són de molts a molts (`posseeix`, `equipa`, les dues d'`enfronta` i `combina amb`). Al diagrama no hi ha cap problema, perquè només és el dibuix del disseny. Però la guia del professor avisa que, en una base de dades real, cada relació de molts a molts s'haurà de convertir en una taula intermèdia.
+
+---
+
+## Pas 9. El diagrama final
