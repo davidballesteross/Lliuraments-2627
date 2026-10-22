@@ -319,3 +319,13 @@ erDiagram
         float Mesura_Z "NOT NULL"
     }
 ```
+
+## Pas 8. Les relacions
+
+Ara que ja tenia les cinc entitats amb tots els seus atributs, tocava connectar-les entre elles. Això són les relacions: una línia que uneix dues entitats i que porta un verb al mig que explica què fan, com ara "equipa" o "acompanya".
+
+El més important és la **cardinalitat**, que vol dir quants elements hi pot haver a cada costat de la línia. Es marca amb uns símbols als extrems. Els que he fet servir són aquests:
+
+- `||` vol dir exactament un.
+- `|o` vol dir zero o un.
+- `}o` o `o{` vol dir zero o molts.
