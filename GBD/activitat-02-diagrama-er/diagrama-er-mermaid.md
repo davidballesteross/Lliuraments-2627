@@ -120,8 +120,16 @@ erDiagram
     }
 ```
 
+---
+
 ## Pas 4. Els atributs de Habilitats
 
----
+Ara tocava l'habilitat. Al PDF té aquestes dades: nom, codi, cost, dany, cooldown i tipus.
+
+Com amb l'enemic, vaig començar buscant la dada que identifica cada habilitat. Tampoc no hi ha res tan únic com un DNI, així que vaig triar el **codi**, que és un número diferent per a cada habilitat. És de tipus `int` i el marco com a clau primària amb `PK`:
+
+I la estructura quedaria aixi:
+
+
 
 
