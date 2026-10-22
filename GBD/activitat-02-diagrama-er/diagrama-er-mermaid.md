@@ -336,6 +336,20 @@ Per decidir-los vaig tornar a mirar el PDF, on hi havia lletres com 1, M i N a l
 
 Un personatge pot tenir moltes habilitats, i una mateixa habilitat la poden tenir molts personatges. A més, pot haver-hi un personatge sense cap habilitat i una habilitat que ningú no té. Per això és de zero o molts als dos costats (`}o--o{`). Aquesta relació és de **molts a molts**.
 
+### Personatge i ítem: "equipa"
+
+Un personatge pot equipar molts ítems, i un mateix ítem el poden equipar molts personatges. També és de molts a molts.
+
+```mermaid
+erDiagram
+    PERSONATGE }o--o{ ITEM : equipa
+```
+
+### Personatge i enemic: "enfronta"
+
+Un personatge es pot enfrontar a molts enemics, i un enemic pot ser enfrontat per molts personatges. Una altra vegada, de molts a molts.
+
+
 ```mermaid
 erDiagram
     PERSONATGE }o--o{ HABILITAT : posseeix
