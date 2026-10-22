@@ -329,3 +329,14 @@ El més important és la **cardinalitat**, que vol dir quants elements hi pot ha
 - `||` vol dir exactament un.
 - `|o` vol dir zero o un.
 - `}o` o `o{` vol dir zero o molts.
+
+Per decidir-los vaig tornar a mirar el PDF, on hi havia lletres com 1, M i N a les línies, i vaig pensar com funciona el joc de veritat. Ho vaig fer relació per relació.
+
+### Personatge i habilitat: "posseeix"
+
+Un personatge pot tenir moltes habilitats, i una mateixa habilitat la poden tenir molts personatges. A més, pot haver-hi un personatge sense cap habilitat i una habilitat que ningú no té. Per això és de zero o molts als dos costats (`}o--o{`). Aquesta relació és de **molts a molts**.
+
+```mermaid
+erDiagram
+    PERSONATGE }o--o{ HABILITAT : posseeix
+```
