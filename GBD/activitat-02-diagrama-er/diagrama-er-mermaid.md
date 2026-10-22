@@ -56,3 +56,17 @@ erDiagram
 
 Per últim, vaig marcar què no pot quedar buit. Un personatge sense nom no té sentit, així que li vaig posar `"NOT NULL"`, que és com ho demana la guia del professor.
 
+```mermaid
+erDiagram
+    PERSONATGE {
+        string DNI PK
+        string Nom "NOT NULL"
+        string Cognom
+        int Vida
+        int Forca
+        int Agilitat
+        int Carisma
+    }
+```
+
+---
