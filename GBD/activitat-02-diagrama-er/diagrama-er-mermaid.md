@@ -2,11 +2,7 @@
 
 En aquesta activitat explico com he fet el pas a pas del diagrama amb l'aplicació de Nermind. Al final del document hi ha el diagrama sencer.
 
-## Pas 1. Les entitats## Pas 6. Els atributs de l'ítem
-
-Per acabar amb els atributs, tocava l'ítem, que és el que en té més. Al PDF té aquestes dades: nom, codi, equipable, comerciable, tipus, pes, qualitat i mesures (X, Y i Z).
-
-Com sempre, vaig començar per la clau primària. L'ítem tampoc no té res tan únic com un DNI, així que vaig triar el **codi**, que és un número diferent per a cada ítem. És de tipus `int` i el marco amb `PK`:
+## Pas 1. Les entitats
 
 Primer de tot vaig mirar el document pdf de la tasca i vaig analitzar les entitats que son les següents:
 
@@ -16,8 +12,6 @@ Primer de tot vaig mirar el document pdf de la tasca i vaig analitzar les entita
 - **MASCOTA**: l'animal que va amb el personatge.
 - **ITEM**: els objectes del joc, com ara armes o armadures.
 Després hi vaig afegir la resta de dades. El nom, el tipus i la qualitat són text (`string`). `Equipable` i `Comerciable` només poden ser sí o no, així que són de tipus `boolean`. I el pes és un número amb decimals, per això és de tipus `float`.
-
-Les **mesures** em van fer pensar una mica més. Al PDF apareixen com una sola cosa, però en realitat són tres valors: X, Y i Z. Mermaid no té una manera de fer un atribut que es divideixi en parts, i la guia del professor diu que en aquests casos s'han de posar les parts com a atributs separats. Per això vaig crear `Mesura_X`, `Mesura_Y` i `Mesura_Z`, que també són números amb decimals (`float`).
 
 I l'estructura quedaria així:
 
