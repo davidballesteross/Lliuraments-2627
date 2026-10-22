@@ -182,4 +182,9 @@ erDiagram
     }
 ```
 
+Després hi vaig afegir la resta de dades. El nom és text (`string`) i la motxilla és un número (`int`).
+
+I l'estructura quedaria així:
+
+
 
