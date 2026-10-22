@@ -279,7 +279,7 @@ erDiagram
         string Nom "NOT NULL"
         string Cognom
         int Vida
-        int Forca
+        int Força
         int Agilitat
         int Carisma
     }
