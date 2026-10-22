@@ -6,7 +6,12 @@ En aquesta activitat explico com he fet el pas a pas del diagrama amb l'aplicaci
 
 Primer de tot vaig mirar el document pdf de la tasca i vaig analitzar les entitats que son les següents:
 
-- **PERSONATGE**: el protagonista, el que controla el jugador.
+- **PERSONATGE**: el protagonista, el que controla el jugador.Una cosa que vaig tenir en compte és que moltes d'aquestes relacions són de molts a molts (`posseeix`, `equipa`, les dues d'`enfronta` i `combina amb`). Al diagrama no hi ha cap problema, perquè només és el dibuix del disseny. Però la guia del professor avisa que, en una base de dades real, cada relació de molts a molts s'haurà de convertir en una taula intermèdia.
+
+---
+
+## Pas 9. El diagrama final
+
 - **HABILITAT**: els poders o tècniques que poden fer servir els personatges i els enemics.
 - **ENEMIC**: els rivals als quals s'enfronta el personatge.
 - **MASCOTA**: l'animal que va amb el personatge.
@@ -410,3 +415,69 @@ Una cosa que vaig tenir en compte és que moltes d'aquestes relacions són de mo
 ---
 
 ## Pas 9. El diagrama final
+
+Per acabar, vaig ajuntar les cinc entitats amb tots els seus atributs 
+
+I aquest seria el diagrama sencer acabat:
+
+```mermaid
+---
+config:
+  theme: neutral
+  look: classic
+  layout: elk
+---
+erDiagram
+    PERSONATGE {
+        string DNI PK
+        string Nom "NOT NULL"
+        string Cognom
+        int Vida
+        int Forca
+        int Agilitat
+        int Carisma
+    }
+    HABILITAT {
+        int Codi PK
+        string Nom "NOT NULL"
+        int Cost
+        int Dany
+        int Cooldown
+        string Tipus "NOT NULL"
+    }
+    ENEMIC {
+        int Codi PK
+        string Nom "NOT NULL"
+        string Tipus "NOT NULL"
+        int Nivell "NOT NULL"
+        int Vida
+        int Forca
+        int Agilitat
+        int Carisma
+    }
+    MASCOTA {
+        string Num_Chip PK
+        string Nom "NOT NULL"
+        int Motxilla
+    }
+    ITEM {
+        int Codi PK
+        string Nom "NOT NULL"
+        boolean Equipable
+        boolean Comerciable "NOT NULL"
+        string Tipus "NOT NULL"
+        float Pes "NOT NULL"
+        string Qualitat "NOT NULL"
+        float Mesura_X "NOT NULL"
+        float Mesura_Y "NOT NULL"
+        float Mesura_Z "NOT NULL"
+    }
+
+    PERSONATGE }o--o{ HABILITAT : posseeix
+    PERSONATGE }o--o{ ITEM : equipa
+    PERSONATGE }o--o{ ENEMIC : enfronta
+    ENEMIC }o--o{ HABILITAT : enfronta
+    HABILITAT }o--o{ HABILITAT : "combina amb"
+    PERSONATGE ||--|| MASCOTA : acompanya
+    MASCOTA |o--o{ ITEM : carrega
+```
