@@ -186,5 +186,13 @@ Després hi vaig afegir la resta de dades. El nom és text (`string`) i la motxi
 
 I l'estructura quedaria així:
 
+```mermaid
+erDiagram
+    MASCOTA {
+        string Num_Chip PK
+        string Nom
+        int Motxilla
+    }
+```
 
 
