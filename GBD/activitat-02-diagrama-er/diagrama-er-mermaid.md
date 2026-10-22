@@ -130,6 +130,12 @@ Com amb l'enemic, vaig començar buscant la dada que identifica cada habilitat. 
 
 I la estructura quedaria aixi:
 
+```mermaid
+erDiagram
+    HABILITAT {
+        int Codi PK
+    }
+```
 
 
 
