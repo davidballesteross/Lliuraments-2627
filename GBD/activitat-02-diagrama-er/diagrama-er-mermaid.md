@@ -169,3 +169,17 @@ erDiagram
 
 ---
 
+## Pas 5. Els atributs de la mascota
+
+Ara tocava la mascota, que és la més curta. Al PDF només té tres dades: número de xip, nom i motxilla.
+
+Per trobar la clau primària aquí ho vaig tenir fàcil. Igual que passa amb les mascotes de veritat, el **número de xip** és únic per a cada una, així que és la dada perfecta per identificar-les. Com que és més un codi que no pas un número amb què es vulgui fer operacions, el vaig posar de tipus text (`string`) i el vaig marcar amb `PK`:
+
+```mermaid
+erDiagram
+    MASCOTA {
+        string Num_Chip PK
+    }
+```
+
+
