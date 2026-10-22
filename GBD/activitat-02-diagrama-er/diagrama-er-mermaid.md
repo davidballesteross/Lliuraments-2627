@@ -153,5 +153,19 @@ erDiagram
     }
 ```
 
+Per últim, vaig marcar què no pot quedar buit. Una habilitat ha de tenir sempre nom i tipus, perquè sense aquestes dues dades no sabríem com es diu ni quin tipus d'habilitat és. Per això els vaig posar `"NOT NULL"`:
 
+```mermaid
+erDiagram
+    HABILITAT {
+        int Codi PK
+        string Nom "NOT NULL"
+        int Cost
+        int Dany
+        int Cooldown
+        string Tipus "NOT NULL"
+    }
+```
+
+---
 
