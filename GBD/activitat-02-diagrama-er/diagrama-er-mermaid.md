@@ -349,8 +349,25 @@ erDiagram
 
 Un personatge es pot enfrontar a molts enemics, i un enemic pot ser enfrontat per molts personatges. Una altra vegada, de molts a molts.
 
+```mermaid
+erDiagram
+    PERSONATGE }o--o{ ENEMIC : enfronta
+```
+
+### Enemic i habilitat: "enfronta"
+
+Els enemics també fan servir habilitats per lluitar. Un enemic pot tenir moltes habilitats i una habilitat la poden fer servir molts enemics, així que també és de molts a molts.
 
 ```mermaid
 erDiagram
-    PERSONATGE }o--o{ HABILITAT : posseeix
+    ENEMIC }o--o{ HABILITAT : enfronta
+```
+
+### Habilitat amb ella mateixa: "combina amb"
+
+Aquesta va ser la més curiosa. Algunes habilitats es poden combinar amb altres habilitats, i això vol dir que l'entitat es relaciona **amb ella mateixa**. Això s'anomena relació reflexiva. Simplement poso la mateixa entitat als dos costats de la línia. Com que el nom de la relació té dues paraules, l'he posat entre cometes.
+
+```mermaid
+erDiagram
+    HABILITAT }o--o{ HABILITAT : "combina amb"
 ```
