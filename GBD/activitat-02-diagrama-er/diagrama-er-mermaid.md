@@ -11,11 +11,8 @@ Primer de tot vaig mirar el document pdf de la tasca i vaig analitzar les entita
 - **ENEMIC**: els rivals als quals s'enfronta el personatge.
 - **MASCOTA**: l'animal que va amb el personatge.
 - **ITEM**: els objectes del joc, com ara armes o armadures.
-Després hi vaig afegir la resta de dades. El nom, el tipus i la qualitat són text (`string`). `Equipable` i `Comerciable` només poden ser sí o no, així que són de tipus `boolean`. I el pes és un número amb decimals, per això és de tipus `float`.
-
+  
 I l'estructura quedaria així:
-
-A Mermaid,he vist que per crear una entitat només cal escriure'n el nom en majúscules. Així que vaig començar posant les cinc, sense res més:
 
 ```mermaid
 erDiagram
