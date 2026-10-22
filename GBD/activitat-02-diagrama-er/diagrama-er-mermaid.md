@@ -89,3 +89,18 @@ erDiagram
 Després hi vaig afegir la resta de dades. El nom i el tipus d'enemic són text (`string`) i el nivell, la vida, l'agilitat, la força i el carisma són números (`int`).
 
 I l'estructura quedaria així:
+
+```mermaid
+erDiagram
+    ENEMIC {
+        int Codi PK
+        string Nom
+        string Tipus
+        int Nivell
+        int Vida
+        int Forca
+        int Agilitat
+        int Carisma
+    }
+```
+
