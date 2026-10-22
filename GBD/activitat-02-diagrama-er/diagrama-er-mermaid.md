@@ -36,3 +36,23 @@ erDiagram
         string DNI PK
     }
 ```
+
+Després hi vaig afegir la resta de dades. El nom i el cognom són text (`string`) i la vida, la força, l'agilitat i el carisma són números (`int`). 
+
+I la estructura quedaria aixi:
+
+```mermaid
+erDiagram
+    PERSONATGE {
+        string DNI PK
+        string Nom
+        string Cognom
+        int Vida
+        int Força
+        int Agilitat
+        int Carisma
+    }
+```
+
+Per últim, vaig marcar què no pot quedar buit. Un personatge sense nom no té sentit, així que li vaig posar `"NOT NULL"`, que és com ho demana la guia del professor.
+
