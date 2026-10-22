@@ -2,7 +2,12 @@
 
 En aquesta activitat explico com he fet el pas a pas del diagrama amb l'aplicació de Nermind. Al final del document hi ha el diagrama sencer.
 
-## Pas 1. Les entitats
+## Pas 1. Les entitats## Pas 6. Els atributs de l'ítem
+
+Per acabar amb els atributs, tocava l'ítem, que és el que en té més. Al PDF té aquestes dades: nom, codi, equipable, comerciable, tipus, pes, qualitat i mesures (X, Y i Z).
+
+Com sempre, vaig començar per la clau primària. L'ítem tampoc no té res tan únic com un DNI, així que vaig triar el **codi**, que és un número diferent per a cada ítem. És de tipus `int` i el marco amb `PK`:
+
 Primer de tot vaig mirar el document pdf de la tasca i vaig analitzar les entitats que son les següents:
 
 - **PERSONATGE**: el protagonista, el que controla el jugador.
@@ -64,7 +69,12 @@ erDiagram
         string Cognom
         int Vida
         int Força
-        int Agilitat
+        int Agilita## Pas 6. Els atributs de l'ítem
+
+Per acabar amb els atributs, tocava l'ítem, que és el que en té més. Al PDF té aquestes dades: nom, codi, equipable, comerciable, tipus, pes, qualitat i mesures (X, Y i Z).
+
+Com sempre, vaig començar per la clau primària. L'ítem tampoc no té res tan únic com un DNI, així que vaig triar el **codi**, que és un número diferent per a cada ítem. És de tipus `int` i el marco amb `PK`:
+t
         int Carisma
     }
 ```
@@ -214,3 +224,9 @@ Per acabar amb els atributs, tocava l'ítem, que és el que en té més. Al PDF 
 
 Com sempre, vaig començar per la clau primària. L'ítem tampoc no té res tan únic com un DNI, així que vaig triar el **codi**, que és un número diferent per a cada ítem. És de tipus `int` i el marco amb `PK`:
 
+```mermaid
+erDiagram
+    ITEM {
+        int Codi PK
+    }
+```
