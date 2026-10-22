@@ -195,4 +195,17 @@ erDiagram
     }
 ```
 
+Per últim, vaig marcar què no pot quedar buit. Una mascota ha de tenir sempre nom, així que li vaig posar `"NOT NULL"`:
+
+```mermaid
+erDiagram
+    MASCOTA {
+        string Num_Chip PK
+        string Nom "NOT NULL"
+        int Motxilla
+    }
+```
+
+---
+
 
