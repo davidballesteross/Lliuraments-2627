@@ -11,7 +11,7 @@ Primer de tot vaig mirar el document pdf de la tasca i vaig analitzar les entita
 - **MASCOTA**: l'animal que va amb el personatge.
 - **ITEM**: els objectes del joc, com ara armes o armadures.
 
-## Pas 2: el codig 
+## Pas 2: El codig 
 A Mermaid,he vist que per crear una entitat només cal escriure'n el nom en majúscules. Així que vaig començar posant les cinc, sense res més:
 
 ```mermaid
@@ -24,3 +24,16 @@ erDiagram
 ```
 
 ---
+
+## Pas 3. Els atributs del personatge.
+
+Ara que ja tenia les caixes principals, tocava dir com és cadascuna: quines dades en volem guardar. Això són els atributs, i es posen dins de les claus `{}`, indicant primer el tipus de dada (text, número, etc.) i després el nom.
+
+Ho he fet entitat per entitat. Vaig començar pel personatge i ho vaig anar construint amb aquest codig:
+
+```mermaid
+erDiagram
+    PERSONATGE {
+        string DNI PK
+    }
+```
