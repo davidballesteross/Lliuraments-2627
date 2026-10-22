@@ -98,9 +98,26 @@ erDiagram
         string Tipus
         int Nivell
         int Vida
-        int Forca
+        int Força
         int Agilitat
         int Carisma
     }
 ```
 
+Per últim, vaig marcar què no pot quedar buit. Un enemic ha de tenir sempre nom, tipus i nivell, perquè sense aquestes dades no sabríem quin enemic és ni com de fort és. Per això els vaig posar `"NOT NULL"`:
+
+```mermaid
+erDiagram
+    ENEMIC {
+        int Codi PK
+        string Nom "NOT NULL"
+        string Tipus "NOT NULL"
+        int Nivell "NOT NULL"
+        int Vida
+        int Força
+        int Agilitat
+        int Carisma
+    }
+```
+
+---
