@@ -288,3 +288,53 @@ erDiagram
 Arribats aquí, ja tenia creats tots els atributs de les cinc entitats. Abans de seguir, vaig voler ajuntar-ho tot en un sol codi per veure com quedava el conjunt i comprovar que no em deixava res del PDF.
 
 Aquest és el codi amb les cinc entitats completes, cadascuna amb la seva clau primària (`PK`), les seves dades i els atributs que no poden quedar buits (`"NOT NULL"`):
+
+I les estructures quedarien aixi si esta tot be: 
+
+```mermaid
+erDiagram
+    PERSONATGE {
+        string DNI PK
+        string Nom "NOT NULL"
+        string Cognom
+        int Vida
+        int Forca
+        int Agilitat
+        int Carisma
+    }
+    HABILITAT {
+        int Codi PK
+        string Nom "NOT NULL"
+        int Cost
+        int Dany
+        int Cooldown
+        string Tipus "NOT NULL"
+    }
+    ENEMIC {
+        int Codi PK
+        string Nom "NOT NULL"
+        string Tipus "NOT NULL"
+        int Nivell "NOT NULL"
+        int Vida
+        int Forca
+        int Agilitat
+        int Carisma
+    }
+    MASCOTA {
+        string Num_Chip PK
+        string Nom "NOT NULL"
+        int Motxilla
+    }
+    ITEM {
+        int Codi PK
+        string Nom "NOT NULL"
+        boolean Equipable
+        boolean Comerciable "NOT NULL"
+        string Tipus "NOT NULL"
+        float Pes "NOT NULL"
+        string Qualitat "NOT NULL"
+        float Mesura_X "NOT NULL"
+        float Mesura_Y "NOT NULL"
+        float Mesura_Z "NOT NULL"
+    }
+```
