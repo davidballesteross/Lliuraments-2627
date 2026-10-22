@@ -137,5 +137,21 @@ erDiagram
     }
 ```
 
+Després hi vaig afegir la resta de dades. El nom i el tipus d'habilitat són text (`string`) i el cost, el dany i el cooldown (el temps d'espera abans de poder tornar-la a fer servir) són números (`int`).
+
+I l'estructura quedaria així:
+
+```mermaid
+erDiagram
+    HABILITAT {
+        int Codi PK
+        string Nom
+        int Cost
+        int Dany
+        int Cooldown
+        string Tipus
+    }
+```
+
 
 
