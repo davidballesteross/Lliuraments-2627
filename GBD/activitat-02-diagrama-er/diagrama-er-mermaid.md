@@ -6,17 +6,12 @@ En aquesta activitat explico com he fet el pas a pas del diagrama amb l'aplicaci
 
 Primer de tot vaig mirar el document pdf de la tasca i vaig analitzar les entitats que son les següents:
 
-- **PERSONATGE**: el protagonista, el que controla el jugador.Una cosa que vaig tenir en compte és que moltes d'aquestes relacions són de molts a molts (`posseeix`, `equipa`, les dues d'`enfronta` i `combina amb`). Al diagrama no hi ha cap problema, perquè només és el dibuix del disseny. Però la guia del professor avisa que, en una base de dades real, cada relació de molts a molts s'haurà de convertir en una taula intermèdia.
-
----
-
-## Pas 9. El diagrama final
-
+- **PERSONATGE**: el protagonista, el que controla el jugador.
 - **HABILITAT**: els poders o tècniques que poden fer servir els personatges i els enemics.
 - **ENEMIC**: els rivals als quals s'enfronta el personatge.
 - **MASCOTA**: l'animal que va amb el personatge.
 - **ITEM**: els objectes del joc, com ara armes o armadures.
-  
+
 I l'estructura quedaria així:
 
 ```mermaid
@@ -54,7 +49,7 @@ erDiagram
         string Nom
         string Cognom
         int Vida
-        int Forca
+        int Força
         int Agilitat
         int Carisma
     }
@@ -69,7 +64,7 @@ erDiagram
         string Nom "NOT NULL"
         string Cognom
         int Vida
-        int Forca
+        int Força
         int Agilitat
         int Carisma
     }
@@ -275,7 +270,7 @@ Arribats aquí, ja tenia creats tots els atributs de les cinc entitats. Abans de
 
 Aquest és el codi amb les cinc entitats completes, cadascuna amb la seva clau primària (`PK`), les seves dades i els atributs que no poden quedar buits (`"NOT NULL"`):
 
-I les estructures quedarien aixi si esta tot be: 
+I les estructures quedarien aixi si esta tot be:
 
 ```mermaid
 erDiagram
@@ -302,7 +297,7 @@ erDiagram
         string Tipus "NOT NULL"
         int Nivell "NOT NULL"
         int Vida
-        int Forca
+        int Força
         int Agilitat
         int Carisma
     }
@@ -325,6 +320,8 @@ erDiagram
     }
 ```
 
+---
+
 ## Pas 8. Les relacions
 
 Ara que ja tenia les cinc entitats amb tots els seus atributs, tocava connectar-les entre elles. Això són les relacions: una línia que uneix dues entitats i que porta un verb al mig que explica què fan, com ara "equipa" o "acompanya".
@@ -340,6 +337,11 @@ Per decidir-los vaig tornar a mirar el PDF, on hi havia lletres com 1, M i N a l
 ### Personatge i habilitat: "posseeix"
 
 Un personatge pot tenir moltes habilitats, i una mateixa habilitat la poden tenir molts personatges. A més, pot haver-hi un personatge sense cap habilitat i una habilitat que ningú no té. Per això és de zero o molts als dos costats (`}o--o{`). Aquesta relació és de **molts a molts**.
+
+```mermaid
+erDiagram
+    PERSONATGE }o--o{ HABILITAT : posseeix
+```
 
 ### Personatge i ítem: "equipa"
 
@@ -433,7 +435,7 @@ erDiagram
         string Nom "NOT NULL"
         string Cognom
         int Vida
-        int Forca
+        int Força
         int Agilitat
         int Carisma
     }
@@ -451,7 +453,7 @@ erDiagram
         string Tipus "NOT NULL"
         int Nivell "NOT NULL"
         int Vida
-        int Forca
+        int Força
         int Agilitat
         int Carisma
     }
