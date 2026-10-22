@@ -76,3 +76,12 @@ erDiagram
 Després del personatge, vaig seguir amb l'enemic. Vaig tornar a mirar el PDF i l'enemic té aquestes dades: nom, codi, tipus, nivell, vida, agilitat, força i carisma.
 
 Igual que amb el personatge, vaig començar buscant la dada que identifica cada enemic sense que es pugui repetir. Aquí no tenim un DNI, així que vaig triar el **codi**, que és un número diferent per a cada enemic. Com que és un número, el tipus és `int`, i el marco com a clau primària amb `PK`:
+
+I la estructura quedaria aixi:
+
+```mermaid
+erDiagram
+    ENEMIC {
+        int Codi PK
+    }
+```
