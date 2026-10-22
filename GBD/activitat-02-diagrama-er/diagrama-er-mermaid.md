@@ -120,4 +120,8 @@ erDiagram
     }
 ```
 
+## Pas 3. Els atributs de Habilitats
+
 ---
+
+
