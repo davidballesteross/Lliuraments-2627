@@ -4,7 +4,6 @@
 
 Llenguatges de marques i sistemes de gestió empresarial (M04) · Pràctica 1 · ASIX
 
-`t:Pikachu|t:Elèctric|n:35|n:55`
 
 **Iker Ortiz, David Ballesteros i Mohamed Chafiq**
 
