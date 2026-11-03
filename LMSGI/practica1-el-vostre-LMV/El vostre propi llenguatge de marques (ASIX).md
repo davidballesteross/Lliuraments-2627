@@ -194,6 +194,8 @@ Només té files i columnes: no pot representar, per exemple, un Pokémon amb di
 
 ---
 
+Link presentacio (https://canva.link/12u9a1x9g0vn6dz)
+
 # Gràcies per la vostra atenció!
 
 ## DPC · Dades Pokémon Compactes
